@@ -4,7 +4,9 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-
+body {
+  overflow-y: hidden; 
+}
 .container{
   width: 100%;
   height: 100vh;
@@ -32,6 +34,9 @@
   z-index: 10;
   cursor: pointer;
 }
+nav{
+  flex: 1;
+}
 nav ul li{
   list-style: none;
   display: inline-block;
@@ -41,4 +46,108 @@ nav ul li a{
   text-decoration: none;
   color: #ffffff;
   font-size: 14px;
+}
+.user{
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+.user img{
+  width: 30px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.sidebar{
+  width: 155px;
+  height: 100vh;
+  background-color: rgba(29, 31, 58, .5);
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.search-icon{
+  width: 20px;
+  display: block;
+  margin: 80px auto 0;
+}
+.social-links{
+  width: 20px;
+  display: block;
+  margin: 220px auto 0;
+  text-align: center;
+}
+.social-links img{
+  height: 15px;
+  margin-bottom: 30px;
+}
+.info-icon{
+  width: 20px;
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  transform: translateX(-50%) ;
+}
+.msg-container{
+  width: 600px;
+  height: 280px;
+  position: absolute;
+  left: 14%;
+  top: 57%;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+#slider{
+  display: inline-flex;
+  transition: .5s;
+}
+.msg-col{
+  width: 600px;
+  height: 280px;
+}
+.msg-col h1{
+  color: #ffffff;
+  font-size: 80px;
+  font-weight: 100;
+  margin: 10px 0;
+}
+.msg-col p{
+  color: #ddd;
+  font-size: 15px;
+  line-height: 25px;
+}
+.msg-col a{
+  display: inline-block;
+  text-decoration: none;
+  color: #555;
+  background-color: #fff;
+  font-size: 15px;
+  padding: 10px 35px;
+  border-radius: 35px;
+  margin: 25px;
+}
+.controller{
+  width: 1px;
+  height: 320px;
+  display: block;
+  background-color: #c0c0c0;
+  position: absolute;
+  top: 55%;
+  right: 50px;
+  transform: translateY(-50%);
+}
+#line1,#line2,#line3,#line4{
+  height: 80px;
+  width: 10px;
+  cursor: pointer;
+  transform: translateX(-50%);
+}
+#active{
+  width: 5px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  border-radius: 10px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  transition: 0.5s;
 }

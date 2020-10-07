@@ -8,10 +8,12 @@
 </head>
 <body>
     <div class="container">
+
         <div class="navbar">
             <div class="logo">
                 <img src="scss/images/logo.png" alt="logo">
             </div>
+
             <nav>
                 <ul>
                     <li><a href="">About</a></li>
@@ -20,7 +22,80 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
+
+            <div class="user">
+                <p>Gérald lemoine</p>
+                <img src="scss/images/user.png" alt="image de l utilisateur">
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <img src="scss/images/search.png" alt="" class="search-icon">
+            <div class="social-links">
+                <img src="scss/images/fb.png">
+                <img src="scss/images/pt.png">
+                <img src="scss/images/tw.png">
+            </div>
+            <img src="scss/images/info.png" alt="" class="info-icon">
+        </div>
+        <div class="msg-container">
+            <div id="slider">
+                <div class="msg-col">
+                    <h1>The Reasonning</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore voluptatum, molestias minus ipsum sit illo nemo doloremque expedita quam totam doloribus at pariatur quos temporibus! Molestiae harum quas voluptatibus!</p>
+                    <a href="">Learn More</a>
+                </div>
+                <div class="msg-col">
+                    <h1>The Knowledge</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore voluptatum, molestias minus ipsum sit illo nemo doloremque expedita quam totam doloribus at pariatur quos temporibus! Molestiae harum quas voluptatibus!</p>
+                    <a href="">Learn More</a>
+                </div>
+                <div class="msg-col">
+                    <h1>The Integration</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore voluptatum, molestias minus ipsum sit illo nemo doloremque expedita quam totam doloribus at pariatur quos temporibus! Molestiae harum quas voluptatibus!</p>
+                    <a href="">Learn More</a>
+                </div>
+                <div class="msg-col">
+                    <h1>The learning</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore voluptatum, molestias minus ipsum sit illo nemo doloremque expedita quam totam doloribus at pariatur quos temporibus! Molestiae harum quas voluptatibus!</p>
+                    <a href="">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="controller">
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="line3"></div>
+            <div id="line4"></div>
+            <div id="active"></div>
         </div>
     </div>
+
+
+    <script>
+        let slider = document.getElementById("slider");
+        let active = document.getElementById("active");
+        let line1 = document.getElementById("line1");
+        let line2 = document.getElementById("line2");
+        let line3= document.getElementById("line3");
+        let line4 = document.getElementById("line4");
+
+        line1.onclick = function(){
+            slider.style.transform = 'translateX(0)';
+            active.style.top = '0';
+        }
+        line2.onclick = function(){
+            slider.style.transform = 'translateX(-25%)';
+            active.style.top = '80px';
+        }
+        line3.onclick = function(){
+            slider.style.transform = 'translateX(-50%)';
+            active.style.top = '160px';
+        }
+        line4.onclick = function(){
+            slider.style.transform = 'translateX(-75%)';
+            active.style.top = '240px';
+        }
+    </script>
 </body>
 </html>
